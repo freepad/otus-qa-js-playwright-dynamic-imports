@@ -4,7 +4,8 @@ export class BasePage {
     }
 
     get header() {
-        const Header = require('./components/header')
-        return new Header(this.page)
+        return import('./components/header').then(({ Header }) => {
+            return new Header(this.page)
+        })
     }
 }

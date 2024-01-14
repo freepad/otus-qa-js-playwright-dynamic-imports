@@ -9,5 +9,3 @@ export class Header extends BasePage {
         return new MainPage(this.page)
     }
 }
-
-module.exports = Header

@@ -3,5 +3,9 @@
     "@playwright/test": "^1.40.1",
     "@types/node": "^20.10.5"
   },
-  "scripts": {}
+  "scripts": {
+    "test:init": "playwright install",
+    "test:dev": "playwright test --ui",
+    "test": "playwright test"
+  }
 }
