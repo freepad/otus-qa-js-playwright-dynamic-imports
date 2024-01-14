@@ -6,7 +6,8 @@ import {EntitySearchPage} from "../pages/entity-search-page"
 test.describe('Some tests with PO pattern', () => {
     test('Navigate to main page from brand logo', async ({page}) => {
         const aboutProjectPage = await new AboutProjectPage(page).loadPage()
-        const mainPage = await aboutProjectPage.header.navigateByBrandLogo()
+        const header = await aboutProjectPage.header
+        const mainPage = await header.navigateByBrandLogo()
 
         await expect(mainPage.page).toHaveTitle('Федресурс')
     })
